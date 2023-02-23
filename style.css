@@ -1,0 +1,296 @@
+/* RESET PADRÃO DA PÁGINA */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+/* ESTILO DO SCROLL */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(223, 223, 223);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(173, 173, 173);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(141, 145, 148);
+}
+
+/* TEXTOS DO SITE */
+
+.texto{
+    font-size: 3.5vw !important;
+}
+
+.subtexto{
+    font-size: 2vw !important;
+}
+
+.paragrafo{
+    font-size: 1.3vw !important;
+}
+
+.link{
+    font-size: 1.5vw !important;   
+}
+
+.link:hover{
+    background-color: #050d42;
+}
+
+@media screen and (max-width: 850px){
+    .texto{
+        font-size: 5.5vw !important;
+
+    }
+    .subtexto{
+        font-size: 3vw !important;
+    }
+    .paragrafo{
+        font-size: 2.3vw !important;
+    }
+    .link{
+        font-size: 3.3vw !important;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .paragrafo{
+        font-size: 3vw !important;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .texto{
+        font-size: 8.5vw !important;
+    }
+    .subtexto{
+        font-size: 5.5vw !important;
+    }
+    .paragrafo{
+        font-size: 3.6vw !important;
+    }
+    .link{
+        font-size: 5.3vw !important;
+    }
+}
+
+/* FIM DO ESTILO DOS TEXTOS */
+
+/* INCLUDES GERAIS DO CSS */
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.padding-30{
+    padding: 0 30%;
+}
+
+.padding-40{
+    padding: 0 40%;
+}
+
+@media screen and (max-width: 550px){
+    .padding-20{
+        padding: 0 10%;
+    }
+    .padding-40{
+        padding: 0 20%;
+    }
+}
+
+/* ESTILO DO BANNER */
+
+section.banner .container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section.banner .banner-texto{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+section.banner .banner-texto b{
+    transition: 0.4s;
+}
+
+section.banner .banner-texto:hover b{
+    color: #8e44ad;
+}
+
+section.banner .map-pos{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+section.banner .banner-texto h1{
+    padding: 0 2%;
+    align-items: center;
+    color: #16a085;
+}
+
+@media screen and (max-width: 765px){
+    section.banner .container{
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+    section.banner .banner-texto{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    section.banner .map-pos{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px){
+    section.banner .map-pos{
+        height: 60vh;
+    }
+}
+
+/* ESTILO DA SESSAO DE CONSULTA  */
+
+section.consulta{
+    padding: 40px 4%;
+}
+
+section.consulta h2, section.consulta p{
+ text-align: center;
+}
+
+section.consulta div.formulario{
+    margin: 30px auto;
+    max-width: 800px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    -webkit-box-shadow: 6px 6px 6px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 6px 6px 6px 2px rgba(0,0,0,0.3);
+    box-shadow: 6px 6px 6px 2px rgba(0,0,0,0.3);
+}
+
+section.consulta .formulario{
+    padding: 30px 2%;
+}
+
+.formulario form{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.formulario form input[type=submit]{
+    background-color: #16a085;
+    color: #fff;
+}
+
+/* ESTILO DA SESSAO EXPLICACAO */
+
+section.explicacao{
+    padding: 20px 0;
+    background-color: #16a085;
+    text-align: center;
+    color: #fff;
+    transition: 0.4s;
+}
+
+section.explicacao i{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+section.explicacao i{
+    font-size: 50px;
+}
+
+/* ESTILO DO FOOTER DA PAGINA */
+
+footer{
+    padding: 20px 0;
+    background-color: #16a085;
+    color: #fff;
+    text-align: center;
+}
+
+/* ESTILO DO MAPA DA SESSAO BANNER */
+
+:root {
+    --map-color: #16a085;
+    --map-hover: #8e44ad;
+    --map-stroke: #ffffff;
+    --map-active: #9b59b6;
+    --map-circle: #1abc9c;
+    --map-circle-hover: #9b59b6;
+    --map-labels: #ffffff;
+}
+  
+#svg-map path {
+    fill: var(--map-color);
+    stroke: var(--map-stroke);
+    stroke-width: 1px;
+    transition: 150ms;
+}
+
+#svg-map text {
+    fill: var(--map-labels);
+    font: 12px Arial-BoldMT, sans-serif;
+    cursor: pointer;
+}
+
+#svg-map a {
+    text-decoration: none !important;
+    transition: 400ms;
+}
+
+#svg-map a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#svg-map a:hover path {
+    fill: var(--map-hover) !important;
+}
+
+#svg-map .circle {
+    fill: var(--map-circle);
+    stroke: transparent;
+}
+
+#svg-map a:hover .circle {
+    fill: var(--map-circle-hover) !important;
+    cursor: pointer;
+}
+
+#svg-map .active-state {
+    fill: var(--map-active);
+}
